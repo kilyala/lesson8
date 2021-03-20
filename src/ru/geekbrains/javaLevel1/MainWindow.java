@@ -11,16 +11,23 @@ public class MainWindow {
         };
 
         // lambda
-        a1 = s -> s.length();
+        f(s -> s.length());
+        f(s -> (s + "hello").length());
 
-        B b1 = (a, b)-> {
-            b *= 2;
-            return a.length() + b;
-        };
+//        B b1 = (a, b)-> {
+//            b *= 2;
+//            return a.length() + b;
+//        };
 
     }
 
+    public static void f(A a) {
+        System.out.println(a.foo("hlo"));
+    }
+
 }
+
+@FunctionalInterface
 interface A {
     int foo(String str);
 }
