@@ -1,6 +1,6 @@
-package Project;
+package XOandHomework8;
 
-import Project.gui.MainWindow;
+import XOandHomework8.gui.MainWindow;
 
 public class Main {
     public static void main(String[] args) {

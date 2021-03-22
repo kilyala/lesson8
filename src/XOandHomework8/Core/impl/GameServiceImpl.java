@@ -1,6 +1,6 @@
-package Project.Core.impl;
-import Project.Domain.MatrixCoordinate;
-import Project.enums.DotType;
+package XOandHomework8.Core.impl;
+import XOandHomework8.Domain.MatrixCoordinate;
+import XOandHomework8.enums.DotType;
 
 import java.util.Random;
 

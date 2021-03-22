@@ -1,4 +1,4 @@
-package Project.enums;
+package XOandHomework8.enums;
 
 public enum DotType {
     X, O, EMPTY;

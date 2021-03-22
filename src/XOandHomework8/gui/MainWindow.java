@@ -1,12 +1,12 @@
-package Project.gui;
+package XOandHomework8.gui;
 
-import Project.Core.impl.GameService;
-import Project.Domain.MatrixCoordinate;
-import Project.enums.DotType;
-import Project.factory.GameFactory;
-import Project.gui.Dialog.ConfigurationDialog;
-import Project.gui.component.Configurable;
-import Project.gui.component.StatusBar;
+import XOandHomework8.Core.impl.GameService;
+import XOandHomework8.Domain.MatrixCoordinate;
+import XOandHomework8.enums.DotType;
+import XOandHomework8.factory.GameFactory;
+import XOandHomework8.gui.Dialog.ConfigurationDialog;
+import XOandHomework8.gui.component.Configurable;
+import XOandHomework8.gui.component.StatusBar;
 
 import javax.swing.*;
 import java.awt.*;

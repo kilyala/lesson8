@@ -1,7 +1,7 @@
-package Project.Core.impl;
+package XOandHomework8.Core.impl;
 
-import Project.Domain.MatrixCoordinate;
-import Project.enums.DotType;
+import XOandHomework8.Domain.MatrixCoordinate;
+import XOandHomework8.enums.DotType;
 
 public interface GameService {
 

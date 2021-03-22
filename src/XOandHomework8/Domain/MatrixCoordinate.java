@@ -1,4 +1,4 @@
-package Project.Domain;
+package XOandHomework8.Domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

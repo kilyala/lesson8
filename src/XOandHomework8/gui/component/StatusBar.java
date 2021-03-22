@@ -1,4 +1,4 @@
-package Project.gui.component;
+package XOandHomework8.gui.component;
 
 import javax.swing.*;
 import java.awt.*;

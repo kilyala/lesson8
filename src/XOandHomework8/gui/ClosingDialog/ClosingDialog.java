@@ -1,6 +1,6 @@
-package Project.gui.ClosingDialog;
+package XOandHomework8.gui.ClosingDialog;
 
-import Project.gui.component.StatusBar;
+import XOandHomework8.gui.component.StatusBar;
 
 import javax.swing.*;
 

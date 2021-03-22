@@ -1,8 +1,8 @@
-package Project.factory;
+package XOandHomework8.factory;
 
-import Project.Core.impl.GameService;
-import Project.Core.impl.GameServiceImpl;
-import Project.enums.DotType;
+import XOandHomework8.Core.impl.GameService;
+import XOandHomework8.Core.impl.GameServiceImpl;
+import XOandHomework8.enums.DotType;
 
 public class GameFactory {
 

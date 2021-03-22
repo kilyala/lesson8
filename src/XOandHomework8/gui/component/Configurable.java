@@ -1,6 +1,6 @@
-package Project.gui.component;
+package XOandHomework8.gui.component;
 
-import Project.enums.DotType;
+import XOandHomework8.enums.DotType;
 
 public interface Configurable {
 

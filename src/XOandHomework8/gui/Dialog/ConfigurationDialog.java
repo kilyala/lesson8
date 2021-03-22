@@ -1,7 +1,7 @@
-package Project.gui.Dialog;
+package XOandHomework8.gui.Dialog;
 
-import Project.enums.DotType;
-import Project.gui.component.Configurable;
+import XOandHomework8.enums.DotType;
+import XOandHomework8.gui.component.Configurable;
 
 import javax.swing.*;
 import java.awt.*;
