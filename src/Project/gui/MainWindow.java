@@ -1,9 +1,11 @@
 package Project.gui;
 
 import Project.Core.impl.GameService;
-import Project.Core.impl.GameServiceImpl;
 import Project.Domain.MatrixCoordinate;
 import Project.enums.DotType;
+import Project.factory.GameFactory;
+import Project.gui.Dialog.ConfigurationDialog;
+import Project.gui.component.Configurable;
 import Project.gui.component.StatusBar;
 
 import javax.swing.*;
@@ -28,12 +30,11 @@ public class MainWindow extends JFrame {
         StatusBar statusBar = new StatusBar();
         statusBar.setMessage("Ожидание хода игрока");
 
-        int mapSize = 3;
+        Configurable configurable = new ConfigurationDialog(this);
+        int mapSize = configurable.getMapSize();
+        playerType = configurable.getPlayerType();
 
-        playerType = DotType.X;
-
-        gameService = new GameServiceImpl(mapSize, playerType);
-
+        gameService = GameFactory.getGameService(mapSize, playerType);
 
         JPanel gridPanel = createGridButtons(mapSize);
 
