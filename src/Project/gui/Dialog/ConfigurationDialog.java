@@ -46,14 +46,13 @@ public class ConfigurationDialog extends JDialog implements Configurable {
         return mapSize;
     }
 
-
     private JPanel getConfigurationPanel(JTextField mapSizeTextField) {
         int gridSize = 2;
         int horizontalGap = 10;
         int verticalGap = 20;
 
         JPanel commonPanel = new JPanel(new GridLayout(gridSize, gridSize, horizontalGap, verticalGap));
-        commonPanel.add(new JLabel("Choose your destiny: кресты или дыры!"));
+        commonPanel.add(new JLabel("Choose: crosses or holes?"));
         commonPanel.add(createChoiceButtonPanel());
         commonPanel.add(new JLabel("Choose your size!"));
         commonPanel.add(mapSizeTextField);

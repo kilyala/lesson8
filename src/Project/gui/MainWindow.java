@@ -10,7 +10,6 @@ import Project.gui.component.StatusBar;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MainWindow extends JFrame {
@@ -19,8 +18,8 @@ public class MainWindow extends JFrame {
 
     private JButton[][] buttons;
 
-    private GameService gameService;
-    private DotType playerType;
+    private final GameService gameService;
+    private final DotType playerType;
 
     public MainWindow() {
         setTitle("Крестики нолики 2.0");
@@ -28,7 +27,7 @@ public class MainWindow extends JFrame {
         setBounds(300, 300, 400, 400);
 
         StatusBar statusBar = new StatusBar();
-        statusBar.setMessage("Ожидание хода игрока");
+        statusBar.setMessage("Player's turn");
 
         Configurable configurable = new ConfigurationDialog(this);
         int mapSize = configurable.getMapSize();
@@ -70,31 +69,28 @@ public class MainWindow extends JFrame {
     }
 
     private ActionListener getButtonListener() {
-        return new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                doHumanTurn((JButton) e.getSource());
+        return e -> {
+            doHumanTurn((JButton) e.getSource());
 
-                if (isGameContinue(playerType)) {
-                    doAiTurn();
-                } else {
-                    disableAllButtons();
-                }
+            if (isGameContinue()) {
+                doAiTurn();
+            } else {
+                disableAllButtons();
             }
         };
     }
 
-    private boolean isGameContinue(DotType dotType) {
+    private boolean isGameContinue() {
         return !gameService.checkWin(playerType) && !gameService.isMapFull();
 
     }
 
     public void disableAllButtons() {
-        for (int i = 0; i < buttons.length; i++) {
+        for (JButton[] button : buttons) {
             for (int j = 0; j < buttons.length; j++) {
-                buttons[i][j].setEnabled(false);
+                button[j].setEnabled(false);
             }
-        }
+        } JOptionPane.showMessageDialog(null, "Game over!");
     }
 
     private void doAiTurn() {
@@ -103,7 +99,7 @@ public class MainWindow extends JFrame {
 
         disabledButtonWithMark(aiSelectedButton, DotType.getEnemyType(playerType));
 
-        if (!isGameContinue(DotType.getEnemyType(playerType))) {
+        if (!isGameContinue()) {
             disableAllButtons();
         }
     }
